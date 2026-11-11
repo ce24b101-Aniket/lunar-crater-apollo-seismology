@@ -1,7 +1,0 @@
-# Suggested runtime packages; Kaggle's installed CUDA-enabled PyTorch was used for the reported training run.
-ultralytics==8.4.205
-obspy==1.5.1
-numpy
-Pillow
-matplotlib
-opencv-python
