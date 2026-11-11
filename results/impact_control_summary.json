@@ -1,0 +1,39 @@
+{
+  "purpose": "Exploratory comparison of post-impact signal with pre-impact controls",
+  "method": {
+    "station": "S15",
+    "channel": "XA.S15..SHZ",
+    "event_window_after_impact_min": [
+      5,
+      20
+    ],
+    "control_window_before_impact_min": [
+      -30,
+      -15
+    ],
+    "rms_window_seconds": 10,
+    "response_corrected_output": "velocity",
+    "bandpass_hz": [
+      1,
+      10
+    ],
+    "missing_sample_fraction": 0.125
+  },
+  "results": [
+    {
+      "event": "Apollo16_SIVB",
+      "event_median_rms_m_per_s": 1.0912e-08,
+      "control_median_rms_m_per_s": 1.1015e-09,
+      "event_to_control_ratio": 9.91
+    },
+    {
+      "event": "Apollo17_SIVB",
+      "event_median_rms_m_per_s": 7.7941e-09,
+      "control_median_rms_m_per_s": 1.0213e-09,
+      "event_to_control_ratio": 7.63
+    }
+  ],
+  "interpretation": "Both post-impact windows have elevated RMS relative to their pre-impact controls, and the plotted post-impact RMS declines over time. This is exploratory evidence from two events, not a general estimate for lunar impacts.",
+  "caveat": "12.5% of samples were identified as missing and linearly interpolated. Results require further validation and should not be presented as conclusive.",
+  "figure": "impact_vs_control_rms.png"
+}
