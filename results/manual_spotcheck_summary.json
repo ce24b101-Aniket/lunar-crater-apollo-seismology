@@ -1,0 +1,49 @@
+{
+  "site": "NAC_DTM_HLNDPHOTOM2_PHO_E011N1499",
+  "tile": "NAC_DTM_HLNDPHOTOM2_PHO_E011N1499__standard_box4__r768_c768.png",
+  "protocol": {
+    "model_confidence": 0.25,
+    "matching": "greedy one-to-one IoU >= 0.5",
+    "sample_description": "four test tiles displayed; detailed error inspection on tile 4"
+  },
+  "four_tile_counts": {
+    "TP": 277,
+    "FP": 167,
+    "FN": 147
+  },
+  "six_missed_reference_box_sizes_px": [
+    5.1,
+    5,
+    5.3,
+    5,
+    5.7,
+    5.2
+  ],
+  "six_high_confidence_unmatched_detections": [
+    {
+      "confidence": 0.53,
+      "best_reference_iou": 0.19
+    },
+    {
+      "confidence": 0.51,
+      "best_reference_iou": 0
+    },
+    {
+      "confidence": 0.47,
+      "best_reference_iou": 0
+    },
+    {
+      "confidence": 0.45,
+      "best_reference_iou": 0
+    },
+    {
+      "confidence": 0.45,
+      "best_reference_iou": 0.171
+    },
+    {
+      "confidence": 0.43,
+      "best_reference_iou": 0
+    }
+  ],
+  "interpretation": "Exploratory visual spot check only; all six unmatched detections are false positives under the stated annotation-based IoU rule. Visual review cannot determine whether some detections are true craters absent from the labels, and does not constitute geological validation."
+}
