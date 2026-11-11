@@ -23,6 +23,8 @@ We trained a fresh YOLO11n while holding out every tile from the Highland site. 
 On the same test tiles, Hough circles achieved F1 0.0106 and LoG achieved F1 0.0188. Hough’s selected parameter and LoG’s selected threshold were both at the edge of their validation search ranges, so these are limited baseline comparisons. This is an exploratory check: results from the original benchmark split had already been inspected. It does not establish performance across all lunar sites or state-of-the-art status.
 
 Details: [`split_manifest.json`](results/split_manifest.json), [`ultralytics_test_metrics.json`](results/ultralytics_test_metrics.json), [`yolo_fixed_confidence.json`](results/yolo_fixed_confidence.json), [`hough_validation_and_test.json`](results/hough_validation_and_test.json), and [`log_validation_and_test.json`](results/log_validation_and_test.json).
+
+A size completeness analysis used each crater’s annotated pixel diameter multiplied by the tile’s effective resolution. At a 20.1 m comparison floor, YOLO11n detected 177 of 243 craters (recall 0.728). Below that floor, it detected 4,970 of 7,520 (recall 0.661). At this site, the 5-pixel annotation threshold corresponds to about 4–5.5 m. The 20.1 m floor is for comparison; it is not the minimum crater size in the labels. These detection results do not estimate lunar surface age.
 ### Crater detection
 
 The benchmark test split used **46 image tiles** with **5,934 retained crater annotations**.
