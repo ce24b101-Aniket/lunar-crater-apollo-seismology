@@ -1,0 +1,44 @@
+{
+  "data_source": "NASA PDS Geosciences Apollo PSE MiniSEED and StationXML",
+  "archive_doi": "10.17189/9ykc-er91",
+  "channel": "XA.S15..SHZ",
+  "sample_rate_hz": 53.0,
+  "filter_hz": [
+    1.0,
+    10.0
+  ],
+  "pre_filter_hz": [
+    0.4,
+    0.7,
+    11.0,
+    14.0
+  ],
+  "window_s": {
+    "before": 60.0,
+    "after": 660.0,
+    "total": 720.0
+  },
+  "events": [
+    {
+      "id": "KO-26",
+      "utc": "1975-03-23T21:10:00",
+      "npts": 38161,
+      "duration_s": 720.0,
+      "missing_sample_fraction": 0.12499672440449673
+    },
+    {
+      "id": "KO-40",
+      "utc": "1976-12-02T12:45:00",
+      "npts": 38161,
+      "duration_s": 720.0,
+      "missing_sample_fraction": 0.12499672440449673
+    }
+  ],
+  "max_abs_normalized_cc_within_5s": 0.5274670018156852,
+  "lag_s": -0.5471698113207547,
+  "missing_data": "PDS MiniSEED missing-sample sentinel -1 was identified and isolated one-sample gaps were linearly interpolated before filtering; missing fraction is reported per event.",
+  "timing_caveat": "Published event times are not P-arrival picks. This windowed cross-correlation is exploratory, is sensitive to non-event background, and is not evidence of a repeating source.",
+  "response_spectrum": "5% damped PSA via Newmark-beta average acceleration, 0.1-1.0 s periods, 1-10 Hz filtered ground acceleration; interpretation beyond band-supported periods is excluded.",
+  "figure": "Apollo_H1_pair_compare.png",
+  "processing_figure": "Apollo_SP_event_processing.png"
+}
