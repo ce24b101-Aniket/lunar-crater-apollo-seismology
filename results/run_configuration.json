@@ -1,0 +1,18 @@
+{
+  "model": "YOLO11n, COCO pretrained",
+  "epochs_requested": 20,
+  "imgsz": 640,
+  "batch": 4,
+  "workers": 0,
+  "device": "Tesla T4 (CUDA 0)",
+  "patience": 6,
+  "seed": 42,
+  "deterministic": true,
+  "cache": true,
+  "pretrained": true,
+  "amp": false,
+  "close_mosaic": 3,
+  "python": "3.13.16",
+  "pytorch": "2.11.0+cu130",
+  "ultralytics": "8.4.205"
+}

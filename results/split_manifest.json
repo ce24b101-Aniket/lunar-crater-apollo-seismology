@@ -1,0 +1,25 @@
+{
+  "train_sites": [
+    "NAC_DTM_A15SIVB_PHO_E009S3481",
+    "NAC_DTM_KINGEJECTA_PHO_E041N1229",
+    "NAC_DTM_MARCH17_PHO_E207N3357",
+    "NAC_DTM_REINER_PHO_E074N3010"
+  ],
+  "validation_site": "NAC_DTM_Apollo17_PHO_E199N0308",
+  "test_site": "NAC_DTM_HLNDPHOTOM2_PHO_E011N1499",
+  "counts": {
+    "train": {
+      "tiles": 144,
+      "craters": 18172
+    },
+    "val": {
+      "tiles": 100,
+      "craters": 10275
+    },
+    "test": {
+      "tiles": 73,
+      "craters": 7763
+    }
+  },
+  "note": "Exploratory site-held-out robustness split. Original benchmark results were already inspected before this split was run."
+}

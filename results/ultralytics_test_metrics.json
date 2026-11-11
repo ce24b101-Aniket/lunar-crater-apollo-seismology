@@ -1,0 +1,10 @@
+{
+  "test_site": "NAC_DTM_HLNDPHOTOM2_PHO_E011N1499",
+  "test_tiles": 73,
+  "reference_craters": 7763,
+  "precision": 0.7101873040581623,
+  "recall": 0.6480741981192838,
+  "mAP50": 0.70371800065069,
+  "mAP50_95": 0.2461805240235207,
+  "protocol": "Ultralytics validation evaluator on the site-held-out test split; evaluator-selected confidence."
+}

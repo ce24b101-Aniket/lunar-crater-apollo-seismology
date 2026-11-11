@@ -1,0 +1,33 @@
+{
+  "validation_site": "NAC_DTM_Apollo17_PHO_E199N0308",
+  "test_site": "NAC_DTM_HLNDPHOTOM2_PHO_E011N1499",
+  "threshold_grid": [
+    0.008,
+    0.012,
+    0.018,
+    0.027,
+    0.04,
+    0.06,
+    0.08,
+    0.12
+  ],
+  "selected_threshold": 0.12,
+  "validation_best": {
+    "TP": 148,
+    "FP": 8677,
+    "FN": 10127,
+    "precision": 0.016770538243626062,
+    "recall": 0.01440389294403893,
+    "F1": 0.01549738219895288
+  },
+  "test": {
+    "TP": 168,
+    "FP": 9978,
+    "FN": 7595,
+    "precision": 0.01655824955647546,
+    "recall": 0.02164111812443643,
+    "F1": 0.018761516555921603
+  },
+  "matching": "Greedy one-to-one IoU >= 0.5",
+  "note": "Selected validation threshold is at the upper edge of the tested grid."
+}

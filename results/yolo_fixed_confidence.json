@@ -1,0 +1,13 @@
+{
+  "test_site": "NAC_DTM_HLNDPHOTOM2_PHO_E011N1499",
+  "images": 73,
+  "confidence": 0.25,
+  "matching_iou": 0.5,
+  "TP": 5147,
+  "FP": 2548,
+  "FN": 2616,
+  "precision": 0.6688758934372969,
+  "recall": 0.6630168749194899,
+  "F1": 0.6659334972182688,
+  "protocol": "Fixed confidence; greedy one-to-one IoU matching."
+}
