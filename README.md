@@ -1,27 +1,64 @@
-# Lunar Crater Detection and Apollo Seismology
+# 🌕 Lunar Crater Detection and Apollo Seismology
 
-Research code and derived results for a course project by Aniket Pandurang Raval, Department of Civil Engineering, Indian Institute of Technology Madras. This is a working research repository; the manuscript and figures are not a journal-ready release.
+A course research project using computer vision to detect lunar craters and Apollo seismic records to explore lunar impacts and seismic signals.
 
-## Scope
+**Author:** Aniket Pandurang Raval  
+**Department:** Civil Engineering, Indian Institute of Technology Madras  
+**Project status:** Working research repository; results are preliminary and have not been peer reviewed.
 
-This repository contains a YOLO11n crater-detection experiment on the public NASA–IBM SomBench NAC benchmark, two classical image-processing comparisons, and exploratory Apollo lunar seismic analyses. The test split contains 46 image tiles and 5,934 retained crater annotations. The project does not claim that YOLO11n is state of the art, derive lunar surface ages, or establish a repeating moonquake source.
+## Project overview
+
+This project combines two analyses:
+
+1. **Crater detection:** Fine-tune YOLO11n on the NASA–IBM SomBench NAC benchmark and compare it with two classical image-processing baselines.
+2. **Apollo seismology:** Check four artificial-impact records for data gaps and clipping, and compare two catalogued Apollo seismic-event windows.
+
+The analyses are presented together as a research workflow. The crater and seismic results have **not** been combined into a validated geological interpretation.
 
 ## Current results
 
-Ultralytics test evaluation reported precision 0.706, recall 0.669, mAP50 0.720, and mAP50–95 0.314. In a separate fixed-confidence (0.25), one-to-one IoU ≥ 0.5 comparison on the same filtered test set, YOLO11n had precision 0.774, recall 0.548, and F1 0.642. Hough-circle and Laplacian-of-Gaussian baselines had F1 0.0065 and 0.0111. Both classical settings selected a validation-grid boundary, so these results compare only the tested configurations. See the JSON files in `results/`.
+### Crater detection
 
-Four artificial-impact records at Apollo 14 station S14 were screened for missing data and instrument-rail clipping. Apollo 15 S-IVB has upper-rail samples; Apollo 17 S-IVB has a long data gap. The KO-26/KO-40 cross-correlation is exploratory, uses catalogue-time windows rather than picked P arrivals, and does not confirm or refute published repeating-event findings.
+The benchmark test split used **46 image tiles** with **5,934 retained crater annotations**.
 
-## Reproduce
+| Evaluation | Model or method | Precision | Recall | F1 | mAP50 | mAP50–95 |
+|---|---|---:|---:|---:|---:|---:|
+| Ultralytics test evaluator | YOLO11n | 0.706 | 0.669 | — | 0.720 | 0.314 |
+| Fixed confidence 0.25, IoU ≥ 0.5 | YOLO11n | 0.774 | 0.548 | 0.642 | — | — |
+| Same fixed-threshold comparison | Hough circles | 0.0044 | 0.0125 | 0.0065 | — | — |
+| Same fixed-threshold comparison | Laplacian of Gaussian (LoG) | 0.0073 | 0.0229 | 0.0111 | — | — |
 
-Use a GPU-enabled Kaggle notebook or compatible environment. Install `requirements.txt`, download SomBench NAC from [NASA–IBM AI4Science](https://huggingface.co/datasets/nasa-ibm-ai4science/Sombench-NAC-Crater-Detection), place the dataset under `work/data/Sombench-NAC-Crater-Detection/`, then run the scripts in order: `download_sombench_nac.py` if using its downloader, `prepare_sombench_yolo.py`, and `train_sombench_yolo.py`. The training script writes outputs under `work/runs/`. The Apollo scripts require the public Apollo PSE data; see `data/README.md`.
+The evaluator metrics and fixed-confidence results use different evaluation procedures, so they are reported separately. Hough and LoG thresholds were selected on the validation set; both selected values were at the edge of the tested threshold grid. These results compare the tested configurations only. **They do not establish that YOLO11n is state of the art or that classical methods generally perform poorly.**
 
-Reported hardware/software: Kaggle, Python 3.13.16, PyTorch 2.11.0+cu130, Ultralytics 8.4.205, Tesla T4. See `config/kaggle_run.json` for settings. Training and validation/test protocols are not site-held-out.
+Detailed results are in [`results/`](results/).
 
-## Data and licensing
+### Apollo seismic analysis
 
-SomBench NAC is distributed under CC BY 4.0 by its publisher. Apollo data are available from the NASA PDS Geosciences Node. This repository does not contain the full benchmark dataset. Ultralytics licensing and all source/data terms must be reviewed before a public research release. No code license or DOI has been assigned yet; this repository should remain private until license review, author review, and figure cleanup are complete.
+Four artificial-impact records at Apollo 14 station S14 were checked for missing samples and instrument clipping:
 
-## Figure status
+- Apollo 14 LM: 6.27% missing; maximum gap of about 1.23 seconds.
+- Apollo 15 S-IVB: 6.96% missing; maximum gap of about 18.74 seconds, with samples at the upper instrument rail.
+- Apollo 16 S-IVB: 6.25% missing; maximum gap of one sample.
+- Apollo 17 S-IVB: 32.18% missing; maximum gap of about 421 seconds.
 
-Figures under `figures/` are diagnostic outputs from the experiment. Some contain in-image titles and are not prepared as final journal figures.
+The KO-26/KO-40 comparison produced a cross-correlation of 0.527 at a lag of −0.547 seconds. The windows were based on catalogue times, not picked P arrivals, and no control pairs were run. This exploratory result **does not confirm or refute** the published repeating-event interpretation.
+
+## Data
+
+The full datasets are not stored in this repository.
+
+- **SomBench NAC:** [NASA–IBM AI4Science dataset](https://huggingface.co/datasets/nasa-ibm-ai4science/Sombench-NAC-Crater-Detection), distributed under CC BY 4.0.
+- **Apollo Passive Seismic Experiment:** [NASA PDS Geosciences Node archive](https://doi.org/10.17189/9ykc-er91). The Apollo network DOI is [10.7914/SN/XA_1969](https://doi.org/10.7914/SN/XA_1969).
+- Data retrieval notes are in [`data/README.md`](data/README.md).
+
+## Reproducing the crater experiment
+
+The reported run used Kaggle with Python 3.13.16, PyTorch 2.11.0+cu130, Ultralytics 8.4.205, and a Tesla T4 GPU. The training configuration used 640-pixel images, batch size 4, seed 42, and up to 20 epochs.
+
+From the repository root, run:
+
+```bash
+python -m pip install -r requirements.txt
+python src/download_sombench_nac.py
+python src/prepare_sombench_yolo.py
+python src/train_sombench_yolo.py
