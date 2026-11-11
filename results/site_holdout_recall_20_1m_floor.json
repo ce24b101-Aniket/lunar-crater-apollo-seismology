@@ -1,0 +1,19 @@
+{
+  "test_site": "NAC_DTM_HLNDPHOTOM2_PHO_E011N1499",
+  "floor_m": 20.1,
+  "confidence": 0.25,
+  "matching_iou": 0.5,
+  "groups": {
+    "below_20_1m": {
+      "reference": 7520,
+      "detected": 4970,
+      "recall": 0.660904255319149
+    },
+    "at_or_above_20_1m": {
+      "reference": 243,
+      "detected": 177,
+      "recall": 0.7283950617283951
+    }
+  },
+  "note": "Single-site exploratory result; size floor uses per-image effective resolution."
+}
