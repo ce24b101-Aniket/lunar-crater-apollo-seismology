@@ -1,0 +1,174 @@
+[
+  {
+    "event_id": "Apollo14_LM",
+    "event_source": "Apollo 14 LM ascent stage",
+    "event_utc_earth_received": "1971-02-07T00:45:25.7",
+    "station_channel": "XA.S14..SHZ",
+    "sampling_rate_hz": 53.0,
+    "npts": 397500,
+    "trace_start_utc": "1971-02-07T00:40:25.717509Z",
+    "trace_end_utc": "1971-02-07T02:45:25.698641Z",
+    "missing_fraction": 0.06265157232704402,
+    "missing_max_run_samples": 65,
+    "min_raw_du_excluding_sentinel": 285.0,
+    "max_raw_du": 750.0,
+    "n_at_0": 0,
+    "n_at_or_above_1023": 0,
+    "fraction_at_or_above_1023_of_all_samples": 0.0,
+    "max_run_at_or_above_1023": 0,
+    "impact_time_window_s": [
+      -300,
+      7200
+    ],
+    "timing_correction": "ATT waveform downloaded but not applied; precise onset and sub-second timing are not interpreted.",
+    "ATT": {
+      "id": "XA.S14..ATT",
+      "npts": 12422,
+      "sampling_rate_hz": 1.65625,
+      "start": "1971-02-07T00:40:26.029264Z",
+      "end": "1971-02-07T02:45:25.500962Z",
+      "min": -1.0,
+      "max": 34742724.777
+    },
+    "peak_abs_filtered_velocity_m_per_s_unvalidated": 6.397993542231121e-07,
+    "filter_hz": [
+      1.0,
+      10.0
+    ],
+    "response_prefilter_hz": [
+      0.4,
+      0.7,
+      11.0,
+      14.0
+    ]
+  },
+  {
+    "event_id": "Apollo15_SIVB",
+    "event_source": "Apollo 15 S-IVB",
+    "event_utc_earth_received": "1971-07-29T20:58:42.9",
+    "station_channel": "XA.S14..SHZ",
+    "sampling_rate_hz": 53.0,
+    "npts": 397500,
+    "trace_start_utc": "1971-07-29T20:53:42.912044Z",
+    "trace_end_utc": "1971-07-29T22:58:42.893176Z",
+    "missing_fraction": 0.06957987421383648,
+    "missing_max_run_samples": 993,
+    "min_raw_du_excluding_sentinel": 2.0,
+    "max_raw_du": 1023.0,
+    "n_at_0": 0,
+    "n_at_or_above_1023": 106,
+    "fraction_at_or_above_1023_of_all_samples": 0.0002666666666666667,
+    "max_run_at_or_above_1023": 5,
+    "impact_time_window_s": [
+      -300,
+      7200
+    ],
+    "timing_correction": "ATT waveform downloaded but not applied; precise onset and sub-second timing are not interpreted.",
+    "ATT": {
+      "id": "XA.S14..ATT",
+      "npts": 12422,
+      "sampling_rate_hz": 1.65625,
+      "start": "1971-07-29T20:53:42.997383Z",
+      "end": "1971-07-29T22:58:42.469081Z",
+      "min": -1.0,
+      "max": 49676317.066
+    },
+    "peak_abs_filtered_velocity_m_per_s_unvalidated": 1.7367088213318467e-06,
+    "filter_hz": [
+      1.0,
+      10.0
+    ],
+    "response_prefilter_hz": [
+      0.4,
+      0.7,
+      11.0,
+      14.0
+    ]
+  },
+  {
+    "event_id": "Apollo16_SIVB",
+    "event_source": "Apollo 16 S-IVB",
+    "event_utc_earth_received": "1972-04-19T21:02:04.0",
+    "station_channel": "XA.S14..SHZ",
+    "sampling_rate_hz": 53.0,
+    "npts": 397500,
+    "trace_start_utc": "1972-04-19T20:57:04.012043Z",
+    "trace_end_utc": "1972-04-19T23:02:03.993175Z",
+    "missing_fraction": 0.0625006289308176,
+    "missing_max_run_samples": 1,
+    "min_raw_du_excluding_sentinel": 14.0,
+    "max_raw_du": 775.0,
+    "n_at_0": 0,
+    "n_at_or_above_1023": 0,
+    "fraction_at_or_above_1023_of_all_samples": 0.0,
+    "max_run_at_or_above_1023": 0,
+    "impact_time_window_s": [
+      -300,
+      7200
+    ],
+    "timing_correction": "ATT waveform downloaded but not applied; precise onset and sub-second timing are not interpreted.",
+    "ATT": {
+      "id": "XA.S14..ATT",
+      "npts": 12422,
+      "sampling_rate_hz": 1.65625,
+      "start": "1972-04-19T20:57:04.153987Z",
+      "end": "1972-04-19T23:02:03.625685Z",
+      "min": 72565019.725,
+      "max": 72572518.747
+    },
+    "peak_abs_filtered_velocity_m_per_s_unvalidated": 6.627175939107355e-07,
+    "filter_hz": [
+      1.0,
+      10.0
+    ],
+    "response_prefilter_hz": [
+      0.4,
+      0.7,
+      11.0,
+      14.0
+    ]
+  },
+  {
+    "event_id": "Apollo17_SIVB",
+    "event_source": "Apollo 17 S-IVB",
+    "event_utc_earth_received": "1972-12-10T20:32:42.3",
+    "station_channel": "XA.S14..SHZ",
+    "sampling_rate_hz": 53.0,
+    "npts": 397500,
+    "trace_start_utc": "1972-12-10T20:27:42.314565Z",
+    "trace_end_utc": "1972-12-10T22:32:42.295697Z",
+    "missing_fraction": 0.3218012578616352,
+    "missing_max_run_samples": 22337,
+    "min_raw_du_excluding_sentinel": 6.0,
+    "max_raw_du": 1023.0,
+    "n_at_0": 0,
+    "n_at_or_above_1023": 15,
+    "fraction_at_or_above_1023_of_all_samples": 3.7735849056603776e-05,
+    "max_run_at_or_above_1023": 4,
+    "impact_time_window_s": [
+      -300,
+      7200
+    ],
+    "timing_correction": "ATT waveform downloaded but not applied; precise onset and sub-second timing are not interpreted.",
+    "ATT": {
+      "id": "XA.S14..ATT",
+      "npts": 12422,
+      "sampling_rate_hz": 1.65625,
+      "start": "1972-12-10T20:27:42.418772Z",
+      "end": "1972-12-10T22:32:41.890470Z",
+      "min": -1.0,
+      "max": 92874649.045
+    },
+    "peak_abs_filtered_velocity_m_per_s_unvalidated": 1.3776569002867038e-06,
+    "filter_hz": [
+      1.0,
+      10.0
+    ],
+    "response_prefilter_hz": [
+      0.4,
+      0.7,
+      11.0,
+      14.0
+    ]
+  }
+]

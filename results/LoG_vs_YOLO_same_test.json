@@ -1,0 +1,45 @@
+{
+  "method": "single-band scale-normalized Laplacian-of-Gaussian blob candidates; square bounding boxes; one-to-one greedy IoU>=0.5",
+  "sigmas_px": [
+    1.7,
+    2.1756418856673663,
+    2.7843633027472086,
+    3.5633984861011485,
+    4.560399412756083,
+    5.83635057515588,
+    7.469299276910564,
+    9.559129625547998,
+    12.233672237568253,
+    15.656523373870296,
+    20.037051785954333,
+    25.64320537106374,
+    32.817900992974515,
+    42.0
+  ],
+  "threshold_grid_validation_only": [
+    0.008,
+    0.012,
+    0.018,
+    0.027,
+    0.04
+  ],
+  "selected_threshold": 0.04,
+  "validation": {
+    "TP": 138,
+    "FP": 20633,
+    "FN": 4977,
+    "precision": 0.006643878484425401,
+    "recall": 0.026979472140762458,
+    "F1": 0.01066213397171411
+  },
+  "test": {
+    "TP": 136,
+    "FP": 18521,
+    "FN": 5798,
+    "precision": 0.007289489199764163,
+    "recall": 0.022918773171553754,
+    "F1": 0.01106095726042031
+  },
+  "test_set": "official standard-label test split, truncated and <5px reference labels removed; 46 tiles",
+  "limits": "Threshold chosen by validation F1; this is a simple classical baseline, not a crater-specific trained model. No test retuning. Scale and threshold choices affect the result."
+}
