@@ -16,7 +16,13 @@ This project combines two analyses:
 The analyses are presented together as a research workflow. The crater and seismic results have **not** been combined into a validated geological interpretation.
 
 ## Current results
+### Site-held-out robustness check
 
+We trained a fresh YOLO11n while holding out every tile from the Highland site. Apollo 17 tiles were used for validation. On the 73 Highland test tiles (7,763 retained crater labels), Ultralytics reported mAP50 of 0.704 and mAP50–95 of 0.246. At fixed confidence 0.25 and IoU 0.5, YOLO11n achieved precision 0.669, recall 0.663, and F1 0.666.
+
+On the same test tiles, Hough circles achieved F1 0.0106 and LoG achieved F1 0.0188. Hough’s selected parameter and LoG’s selected threshold were both at the edge of their validation search ranges, so these are limited baseline comparisons. This is an exploratory check: results from the original benchmark split had already been inspected. It does not establish performance across all lunar sites or state-of-the-art status.
+
+Details: [`split_manifest.json`](results/split_manifest.json), [`ultralytics_test_metrics.json`](results/ultralytics_test_metrics.json), [`yolo_fixed_confidence.json`](results/yolo_fixed_confidence.json), [`hough_validation_and_test.json`](results/hough_validation_and_test.json), and [`log_validation_and_test.json`](results/log_validation_and_test.json).
 ### Crater detection
 
 The benchmark test split used **46 image tiles** with **5,934 retained crater annotations**.
